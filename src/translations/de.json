@@ -1,0 +1,115 @@
+{
+    "not_found_title": "Seite nicht gefunden",
+    "not_found_description": "Die gesuchte Seite existiert nicht.",
+    "not_found_button": "Zurück",
+    "user_clicks_count": "Von {amount} Benutzern diesen Monat ausgewählt",
+    "product_get_discount": "Erhalten Sie {discount}% Rabatt",
+    "navbar": {
+      "app_name": "SubMusic",
+      "language_label": "Sprache:",
+      "languages": {
+        "en": "English",
+        "de": "Deutsch"
+      }
+    },
+    "home": {
+      "title": "Willkommen bei SubMusic!",
+      "subtitle": "Ihr persönliches Aufzeichnungsverwaltungssystem"
+    },
+    "hero": {
+      "title": "Entdecke Deinen nächsten Lieblingssong",
+      "subtitle": "Schließe dich Tausenden von Musikliebhabern an, die neue Songs entdecken, Playlists erstellen und ihre musikalische Reise teilen",
+      "cta_button": "Jetzt Zusammen",
+      "cta_secondary": "Mehr Info",
+      "stats": {
+        "users": "Aktive Nutzer",
+        "songs": "Verfügbare Songs",
+        "playlists": "Erstellte Playlists"
+      }
+    },
+    "topAlbums": {
+      "title": "Top Alben",
+      "subtitle": "Entdecke die beliebtesten Alben von Top-Künstlern weltweit",
+      "listeners": "Hörer",
+      "albums_count": "Alben",
+      "updated_every": "Alle 5 Minuten aktualisiert",
+      "loading": "Alben werden geladen...",
+      "error": "Alben können derzeit nicht geladen werden"
+    },
+    "profile": {
+      "title": "Mein Profil",
+      "subtitle": "Verwalte dein Konto, sieh dir deine Aktivitäten an und entdecke deinen Musikgeschmack",
+      "quick_stats": {
+        "title": "Schnelle Statistiken",
+        "liked_albums": "Gelikte Alben",
+        "member_since": "Mitglied seit",
+        "today": "Heute",
+        "account_status": "Kontostatus",
+        "active": "Aktiv"
+      },
+      "account_actions": {
+        "title": "Kontoaktionen",
+        "settings": "Kontoeinstellungen",
+        "privacy": "Datenschutzeinstellungen",
+        "sign_out": "Abmelden"
+      }
+    },
+    "likedAlbums": {
+      "title": "Deine gelikten Alben",
+      "sign_in_title": "Melde dich an, um deine gelikten Alben zu sehen",
+      "sign_in_subtitle": "Like Alben, um sie in deiner Sammlung zu speichern",
+      "empty_title": "Noch keine gelikten Alben",
+      "empty_subtitle": "Beginne Alben zu liken, um deine Sammlung aufzubauen"
+    },
+    "albumDetail": {
+      "back": "Zurück",
+      "not_found_title": "Album nicht gefunden",
+      "not_found_subtitle": "Das Album, nach dem du suchst, existiert nicht oder wurde entfernt.",
+      "go_back": "Zurück gehen",
+      "tracks": "Titel",
+      "released": "Veröffentlicht",
+      "listeners": "Hörer",
+      "play_count": "Wiedergaben",
+      "about_album": "Über dieses Album",
+      "track_list": "Titelliste",
+      "view_lastfm": "Auf Last.fm ansehen"
+    },
+    "album": {
+      "back_to_home": "Zurück zur Startseite",
+      "tracks": "Titel",
+      "listen_now": "Jetzt Anhören",
+      "add_to_library": "Zur Bibliothek hinzufügen",
+      "price": "Preis",
+      "release_date": "Veröffentlichungsdatum",
+      "comments_title": "Kommentare",
+      "add_comment": "Kommentar hinzufügen",
+      "no_comments": "Noch keine Kommentare",
+      "comment_form": {
+        "title": "Kommentar hinterlassen",
+        "name_label": "Dein Name",
+        "name_placeholder": "Gib deinen Namen ein",
+        "title_label": "Kommentar-Titel",
+        "title_placeholder": "Worum geht es in deinem Kommentar?",
+        "content_label": "Dein Kommentar",
+        "content_placeholder": "Teile deine Gedanken zu diesem Album...",
+        "cancel_button": "Abbrechen",
+        "submit_button": "Kommentar absenden"
+      },
+      "comments_list": {
+        "title": "Kommentare",
+        "no_comments": "Noch keine Kommentare. Sei der Erste, der kommentiert!"
+      }
+    },
+    "home": {
+      "albums": {
+        "title": "Top",
+        "title_highlight": "Alben",
+        "subtitle": "Entdecke die beliebtesten Alben im Moment"
+      },
+      "viewed": {
+        "title": "Zuletzt",
+        "title_highlight": "Angesehen",
+        "subtitle": "Alben, die du kürzlich angesehen hast"
+      }
+    }
+  }
