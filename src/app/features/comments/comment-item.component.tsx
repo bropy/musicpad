@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Trash2, Edit2, X, Check } from 'lucide-react'
 import { updateCommentSchema, type UpdateCommentForm } from '@/app/shared/validations'
-import { useComments } from '@/app/shared/hooks'
+import { useComments } from '@/app/entites'
 
 interface Comment {
   id: string

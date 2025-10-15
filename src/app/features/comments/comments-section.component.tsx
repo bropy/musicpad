@@ -2,7 +2,7 @@
 
 import { type FC, useState } from 'react'
 import { MessageSquare } from 'lucide-react'
-import { useComments } from '@/app/shared/hooks'
+import { useComments } from '@/app/entites'
 import CommentForm from './comment-form.component'
 import CommentItem from './comment-item.component'
 

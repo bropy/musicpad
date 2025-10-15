@@ -4,7 +4,7 @@ import { type FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { createCommentSchema, type CreateCommentForm } from '@/app/shared/validations'
-import { useComments } from '@/app/shared/hooks'
+import { useComments } from '@/app/entites'
 
 interface IProps {
   onSuccess?: () => void
