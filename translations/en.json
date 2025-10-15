@@ -11,5 +11,73 @@
   "show_less": "Show less",
   "product_price_btn": "Check Price",
   "product_get_discount": "Get {discount}% off",
-  "product_estimated_price": "Estimated Price"
+  "product_estimated_price": "Estimated Price",
+  "footer": {
+    "brand_name": "myIQ",
+    "customer_support": {
+      "title": "Customer Support",
+      "how_to_cancel": "How to Cancel",
+      "support_button": "Customer Support",
+      "support_availability": "24/7/365"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy_policy": "Privacy Policy",
+      "terms_conditions": "Terms & Conditions",
+      "cookie_policy": "Cookie Policy",
+      "refund_policy": "Refund Policy"
+    },
+    "about_us": {
+      "title": "About Us",
+      "help": "Help",
+      "blog": "Blog",
+      "reviews": "Reviews",
+      "pricing": "Pricing"
+    },
+    "copyright": "Copyright © 2024-2025 myIQ™. All rights reserved. All trademarks referenced herein are the properties of their respective owners.",
+    "payment_methods": {
+      "visa": "Visa",
+      "mastercard": "Mastercard",
+      "paypal": "PayPal",
+      "apple_pay": "Apple Pay",
+      "google_pay": "Google Pay"
+    }
+  },
+  "tests": {
+    "title": "Available Tests",
+    "subtitle": "Each test reveals a new part of you. Start with intelligence, with more tests coming soon",
+    "iq_test": {
+      "title": "IQ / Intelligence Test",
+      "duration": "15 minutes",
+      "questions": "25 questions",
+      "button": "Start IQ Test Now"
+    },
+    "personality_test": {
+      "title": "Personality Type",
+      "duration": "20 minutes",
+      "questions": "90 questions",
+      "button": "Start Personality Test"
+    },
+    "love_style_test": {
+      "title": "Love Style",
+      "duration": "30 minutes",
+      "questions": "120 questions",
+      "button": "Start Love Style Test"
+    },
+    "career_test": {
+      "title": "Career",
+      "duration": "25 minutes",
+      "questions": "35 questions",
+      "button": "Coming Soon"
+    }
+  },
+  "iq_hero": {
+    "title_part1": "Want to Know Your",
+    "title_part2": "Real IQ Score?",
+    "subtitle": "Take our IQ test and unlock your path to self-discovery and development",
+    "start_button": "Start IQ Test Now",
+    "how_it_works": "How It Works",
+    "reviews_label": "Excellent user reviews",
+    "tests_today": "IQ tests taken today!"
+  }
 }

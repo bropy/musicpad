@@ -1,0 +1,1 @@
+export {tests} from '@/app/features/tests/elements/constants/tests.constant'

@@ -8,9 +8,11 @@ import { GraphIcon } from '@/app/shared/icons'
 import { useFeatureFlag } from '@/pkg/integrations/growthbook'
 import { FEATURE_FLAGS } from '@/app/shared/flags'
 import { captureException, addBreadcrumb } from '@/pkg/integrations/sentry'
+import { useTranslations } from 'next-intl'
 
 const HeroComponent: FC = () => {
     const showHeroButton = useFeatureFlag(FEATURE_FLAGS.HERO_BUTTON, true)
+    const t = useTranslations('iq_hero')
 
     const handleStartTest = () => {
         console.log('Start test button clicked!')
@@ -37,10 +39,10 @@ const HeroComponent: FC = () => {
                 <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12">
                     <div className="flex-1 w-full lg:w-auto text-center lg:text-left">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 lg:mb-6">
-                            Want to Know Your <span className="text-blue-500">Real IQ Score?</span>
+                            {t('title_part1')} <span className="text-blue-500">{t('title_part2')}</span>
                         </h1>
                         <p className="text-base sm:text-lg text-gray-600 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0">
-                            Take our IQ test and unlock your path to self-discovery and development
+                            {t('subtitle')}
                         </p>
                         
                         {showHeroButton && (
@@ -51,13 +53,13 @@ const HeroComponent: FC = () => {
                                     onClick={handleStartTest}
                                     className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-6 rounded-lg text-base"
                                 >
-                                    Start IQ Test Now
+                                    {t('start_button')}
                                 </Button>
                                 <Button 
                                     color="primary"
                                     className="bg-white hover:bg-gray-50 text-teal-600 border-2 border-teal-600 font-semibold px-6 py-6 rounded-lg text-base"
                                 >
-                                    How It Works
+                                    {t('how_it_works')}
                                 </Button>
                             </div>
                         )}
@@ -95,7 +97,7 @@ const HeroComponent: FC = () => {
                             </div>
                             <div className="text-center sm:text-left">
                                 <div className="flex items-center gap-1 mb-1 justify-center sm:justify-start">
-                                    <p className="text-sm font-medium text-gray-700">Excellent user reviews</p>
+                                    <p className="text-sm font-medium text-gray-700">{t('reviews_label')}</p>
                                     <div className="flex gap-0.5">
                                         <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                                         <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -105,7 +107,7 @@ const HeroComponent: FC = () => {
                                     </div>
                                 </div>
                                 <p className="text-sm text-gray-600">
-                                    <span className="font-bold text-gray-900">12024</span> IQ tests taken today!
+                                    <span className="font-bold text-gray-900">12024</span> {t('tests_today')}
                                 </p>
                             </div>
                         </div>

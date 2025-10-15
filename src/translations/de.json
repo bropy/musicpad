@@ -12,10 +12,6 @@
         "de": "Deutsch"
       }
     },
-    "home": {
-      "title": "Willkommen bei SubMusic!",
-      "subtitle": "Ihr persönliches Aufzeichnungsverwaltungssystem"
-    },
     "hero": {
       "title": "Entdecke Deinen nächsten Lieblingssong",
       "subtitle": "Schließe dich Tausenden von Musikliebhabern an, die neue Songs entdecken, Playlists erstellen und ihre musikalische Reise teilen",
@@ -111,5 +107,73 @@
         "title_highlight": "Angesehen",
         "subtitle": "Alben, die du kürzlich angesehen hast"
       }
+    },
+    "footer": {
+      "brand_name": "myIQ",
+      "customer_support": {
+        "title": "Kundenbetreuung",
+        "how_to_cancel": "Wie kündigen",
+        "support_button": "Kundenbetreuung",
+        "support_availability": "24/7/365"
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "privacy_policy": "Datenschutzrichtlinie",
+        "terms_conditions": "Allgemeine Geschäftsbedingungen",
+        "cookie_policy": "Cookie-Richtlinie",
+        "refund_policy": "Rückerstattungsrichtlinie"
+      },
+      "about_us": {
+        "title": "Über uns",
+        "help": "Hilfe",
+        "blog": "Blog",
+        "reviews": "Bewertungen",
+        "pricing": "Preise"
+      },
+      "copyright": "Copyright © 2024-2025 myIQ™. Alle Rechte vorbehalten. Alle hierin genannten Marken sind Eigentum ihrer jeweiligen Inhaber.",
+      "payment_methods": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "paypal": "PayPal",
+        "apple_pay": "Apple Pay",
+        "google_pay": "Google Pay"
+      }
+    },
+    "tests": {
+      "title": "Verfügbare Tests",
+      "subtitle": "Jeder Test enthüllt einen neuen Teil von dir. Beginne mit Intelligenz, weitere Tests folgen bald",
+      "iq_test": {
+        "title": "IQ / Intelligenztest",
+        "duration": "15 Minuten",
+        "questions": "25 Fragen",
+        "button": "Jetzt IQ-Test starten"
+      },
+      "personality_test": {
+        "title": "Persönlichkeitstyp",
+        "duration": "20 Minuten",
+        "questions": "90 Fragen",
+        "button": "Persönlichkeitstest starten"
+      },
+      "love_style_test": {
+        "title": "Liebesstil",
+        "duration": "30 Minuten",
+        "questions": "120 Fragen",
+        "button": "Liebesstiltest starten"
+      },
+      "career_test": {
+        "title": "Karriere",
+        "duration": "25 Minuten",
+        "questions": "35 Fragen",
+        "button": "Demnächst verfügbar"
+      }
+    },
+    "iq_hero": {
+      "title_part1": "Möchten Sie Ihren",
+      "title_part2": "echten IQ-Wert wissen?",
+      "subtitle": "Machen Sie unseren IQ-Test und erschließen Sie Ihren Weg zur Selbstentdeckung und Entwicklung",
+      "start_button": "Jetzt IQ-Test starten",
+      "how_it_works": "Wie es funktioniert",
+      "reviews_label": "Hervorragende Nutzerbewertungen",
+      "tests_today": "IQ-Tests heute absolviert!"
     }
   }
