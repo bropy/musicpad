@@ -1,20 +1,18 @@
-import { type FC } from 'react'
-import {
-  HeroSectionComponent,
-  AlbumsSectionComponent,
-  CtaSectionComponent,
-  ViewedAlbumsSectionComponent,
-} from '@/app/features'
+'use client'
 
-// component
+import { ContainerComponent } from '@/app/shared/ui/container'
+import { type FC } from 'react'
+import { HeroComponent } from '@/app/features/hero'
+import { HowItWorksComponent } from '@/app/features/how-it-works'
+import { LikedAlbumsComponent } from '@/app/features/liked-albums'
+
 const HomeModule: FC = () => {
   return (
-    <main className='min-h-screen bg-black'>
-      <HeroSectionComponent />
-      <AlbumsSectionComponent />
-      <CtaSectionComponent />
-      <ViewedAlbumsSectionComponent />
-    </main>
+    <ContainerComponent>
+      <HeroComponent/>
+      <HowItWorksComponent/>
+      <LikedAlbumsComponent/>
+    </ContainerComponent>
   )
 }
 

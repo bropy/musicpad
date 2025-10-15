@@ -1,10 +1,13 @@
 import { lastFmFetcher } from '../fetcher/lastfm.fetcher'
+import { queryOptions } from '@tanstack/react-query'
 
 export interface LastFmAlbum {
   name: string
   mbid: string
   listeners: string
   url: string
+  artist?: string
+  slug?: string
   image: Array<{
     '#text': string
     size: 'small' | 'medium' | 'large' | 'extralarge' | 'mega'
@@ -147,10 +150,15 @@ export const lastFmService = {
       const albumPromises = artists.map(async (artist) => {
         try {
           const albumsResponse = await this.getTopAlbums(artist.name, 1, 2)
-          return albumsResponse.topalbums.album.map(album => ({
-            ...album,
-            artist: artist.name
-          }))
+          return albumsResponse.topalbums.album.map(album => {
+            const cleanName = album.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+            const identifier = album.mbid || Buffer.from(`${album.name}-${artist.name}`).toString('base64').replace(/[^a-z0-9]/gi, '').substring(0, 16)
+            return {
+              ...album,
+              artist: artist.name,
+              slug: `${cleanName}--${identifier}`
+            }
+          })
         } catch (error) {
           console.warn(`Failed to fetch albums for ${artist.name}:`, error)
           return []
@@ -162,6 +170,33 @@ export const lastFmService = {
     } catch (error) {
       throw new Error(`Failed to fetch all top albums: ${error}`)
     }
+  },
+
+  async getAlbumBySlug(slug: string): Promise<LastFmAlbum | null> {
+    const parts = slug.split('--')
+    if (parts.length < 2) return null
+    
+    const identifier = parts[parts.length - 1]
+    
+    if (identifier.length === 36 || identifier.match(/^[a-f0-9-]+$/i)) {
+      try {
+        const detail = await this.getAlbumDetail(identifier)
+        return {
+          name: detail.name,
+          mbid: detail.mbid,
+          listeners: detail.listeners,
+          url: detail.url,
+          image: detail.image,
+          artist: detail.artist.name,
+          slug
+        }
+      } catch (error) {
+        console.warn('Failed to fetch album by mbid:', error)
+      }
+    }
+    
+    const allAlbums = await this.getAllTopAlbums()
+    return allAlbums.find(album => album.slug === slug) || null
   },
 
   async getAlbumDetail(albumId: string): Promise<LastFmAlbumDetail> {
@@ -185,3 +220,20 @@ export const lastFmService = {
     return data.album
   },
 }
+
+export const allTopAlbumsQueryOptions = () =>
+  queryOptions({
+    queryKey: ['lastfm', 'allTopAlbums'],
+    queryFn: () => lastFmService.getAllTopAlbums(),
+    staleTime: 5 * 60 * 1000,
+    gcTime: 10 * 60 * 1000,
+  })
+
+export const albumBySlugFromLastFmQueryOptions = (slug: string) =>
+  queryOptions({
+    queryKey: ['lastfm', 'album', slug],
+    queryFn: () => lastFmService.getAlbumBySlug(slug),
+    staleTime: 10 * 60 * 1000,
+    gcTime: 20 * 60 * 1000,
+  })
+

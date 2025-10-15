@@ -12,6 +12,7 @@ import { RestApiProvider } from '@/pkg/libraries/rest-api'
 import { UiProvider } from '@/pkg/libraries/ui'
 import { MixpanelProvider } from '@/pkg/integrations/mixpanel'
 import { GrowthBookProvider } from '@/pkg/integrations/growthbook'
+import { SentryProvider } from '@/pkg/integrations/sentry'
 
 import '@/config/styles/global.css'
 
@@ -74,11 +75,13 @@ const RootLayout: FC<Readonly<IProps>> = async (props) => {
         <NextIntlClientProvider>
           <UiProvider locale={locale}>
             <RestApiProvider>
-              <MixpanelProvider>
-                <GrowthBookProvider>
-                  <LayoutModule>{children}</LayoutModule>
-                </GrowthBookProvider>
-              </MixpanelProvider>
+              <SentryProvider>
+                <MixpanelProvider>
+                  <GrowthBookProvider>
+                    <LayoutModule>{children}</LayoutModule>
+                  </GrowthBookProvider>
+                </MixpanelProvider>
+              </SentryProvider>
             </RestApiProvider>
           </UiProvider>
         </NextIntlClientProvider>

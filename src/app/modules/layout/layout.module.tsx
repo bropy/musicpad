@@ -2,17 +2,15 @@ import { type FC, type ReactNode } from 'react'
 
 import { FooterComponent } from '@/app/widgets/footer'
 import { NavbarComponent } from '@/app/widgets/navbar'
+import { LikedIndicator } from '@/app/widgets/liked-indicator'
 
-// interface
 interface IProps {
   children: ReactNode
 }
 
-// component
 const LayoutModule: FC<Readonly<IProps>> = (props) => {
   const { children } = props
 
-  // return
   return (
     <>
       <NavbarComponent />
@@ -20,6 +18,8 @@ const LayoutModule: FC<Readonly<IProps>> = (props) => {
       {children}
 
       <FooterComponent />
+      
+      <LikedIndicator />
     </>
   )
 }

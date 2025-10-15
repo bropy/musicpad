@@ -1,11 +1,10 @@
-import { Sentry } from './sentry.client'
+import * as Sentry from '@sentry/nextjs'
 
-// Error tracking utilities
 export { Sentry } from './sentry.client'
 export { SentryProvider } from './sentry.provider'
 
-// Common error tracking functions
-export const captureException = (error: Error, context?: Record<string, string | number | boolean>) => {
+export const captureException = (error: Error, context?: Record<string, any>) => {
+  console.log('Capturing exception to Sentry:', error.message, context)
   Sentry.captureException(error, {
     tags: context,
     level: 'error'
@@ -13,6 +12,7 @@ export const captureException = (error: Error, context?: Record<string, string |
 }
 
 export const captureMessage = (message: string, level: 'info' | 'warning' | 'error' = 'info') => {
+  console.log('Capturing message to Sentry:', message, level)
   Sentry.captureMessage(message, level)
 }
 
