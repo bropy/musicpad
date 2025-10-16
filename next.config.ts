@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 64, 128, 384],
   },
 
-  serverExternalPackages: ['pino', 'pino-pretty'],
+  serverExternalPackages: ['pino', 'pino-pretty', 'postgres', 'pg', 'drizzle-orm'],
 
   experimental: {
     reactCompiler: true,
@@ -83,11 +83,32 @@ const nextConfig: NextConfig = {
     },
   },
 
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.svg$/i,
       use: ['@svgr/webpack'],
     })
+
+    // Prevent client-side bundling of server-only packages
+    if (!isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        // Database packages
+        'postgres': false,
+        'pg': false,
+        'pg-native': false,
+        'drizzle-orm': false,
+        'drizzle-orm/postgres-js': false,
+        // Node.js built-in modules
+        'net': false,
+        'tls': false,
+        'fs': false,
+        'perf_hooks': false,
+        'os': false,
+        'path': false,
+        'crypto': false,
+      }
+    }
 
     return config
   },

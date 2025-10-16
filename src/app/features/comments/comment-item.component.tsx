@@ -4,6 +4,7 @@ import { type FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Trash2, Edit2, X, Check } from 'lucide-react'
+import { Button } from '@heroui/button'
 import { updateCommentSchema, type UpdateCommentForm } from '@/app/shared/validations'
 import { useComments } from '@/app/entites'
 
@@ -91,22 +92,23 @@ const CommentItem: FC<IProps> = ({ comment }) => {
           </div>
 
           <div className="flex gap-2">
-            <button
+            <Button
               type="submit"
               disabled={isUpdating}
-              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
+              startContent={<Check className="w-4 h-4" />}
+              className="px-4 py-2 bg-primary hover:bg-primary/80 text-white rounded-lg"
             >
-              <Check className="w-4 h-4" />
               Save
-            </button>
-            <button
+            </Button>
+            <Button
               type="button"
               onClick={() => setIsEditing(false)}
-              className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+              variant="bordered"
+              startContent={<X className="w-4 h-4" />}
+              className="px-4 py-2 border-gray-300 rounded-lg"
             >
-              <X className="w-4 h-4" />
               Cancel
-            </button>
+            </Button>
           </div>
         </form>
       </div>
@@ -123,21 +125,25 @@ const CommentItem: FC<IProps> = ({ comment }) => {
           </p>
         </div>
         <div className="flex gap-2">
-          <button
+          <Button
+            isIconOnly
             onClick={() => setIsEditing(true)}
-            className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
+            variant="light"
+            className="text-gray-600 hover:text-blue-600"
             aria-label="Edit"
           >
             <Edit2 className="w-4 h-4" />
-          </button>
-          <button
+          </Button>
+          <Button
+            isIconOnly
             onClick={handleDelete}
             disabled={isDeleting}
-            className="p-2 text-gray-600 hover:text-red-600 transition-colors disabled:opacity-50"
+            variant="light"
+            className="text-gray-600 hover:text-red-600"
             aria-label="Delete"
           >
             <Trash2 className="w-4 h-4" />
-          </button>
+          </Button>
         </div>
       </div>
       <p className="text-gray-700 whitespace-pre-wrap">{comment.content}</p>

@@ -14,13 +14,14 @@ export function GrowthBookProvider({ children }: { children: React.ReactNode }) 
   useEffect(() => {
     growthbook.loadFeatures()
       .then(() => {
-        console.log('GrowthBook features loaded')
+        console.log('GrowthBook features loaded:', growthbook.getFeatures())
       })
       .catch((error) => {
         console.error('Failed to load GrowthBook features:', error)
+        // Set default fallback features when API fails
         growthbook.setFeatures({
           'button-on-hero': {
-            defaultValue: true,
+            defaultValue: false,  // Changed to false
             rules: []
           }
         })

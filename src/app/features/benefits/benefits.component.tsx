@@ -1,16 +1,19 @@
 'use client';
 
 import { BadgeCheck } from "lucide-react";
+import { useTranslations } from 'next-intl';
 import { benefits } from './elements/constant';
 
 // component
 function BenefitsSection() {
+  const t = useTranslations('benefits');
+
   // return
   return (
-      <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-            What Will You Get
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
+            {t('title')}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">

@@ -9,6 +9,8 @@ import AvailableTests from '@/app/features/tests/test.component'
 import PricingPlans from '@/app/features/pricing/pricing.component'
 import { CommunitySection } from '@/app/features/community'
 import BenefitsSection from '@/app/features/benefits/benefits.component'
+import BoostAbilities from '@/app/features/boost/boost.component'
+import { CommentsSection } from '@/app/features/comments'
 
 // component
 const HomeModule: FC = () => {
@@ -16,12 +18,22 @@ const HomeModule: FC = () => {
   return (
     <ContainerComponent>
       <HeroComponent/>
+
       <HowItWorksComponent/>
+
       <AvailableTests/>
-      <CommunitySection/>
+
+      <BoostAbilities/>
+
       <BenefitsSection/>
+
+      <CommunitySection/>
+
       <PricingPlans/>
+      
       <FAQAccordion/>
+
+      <CommentsSection/>
     </ContainerComponent>
   )
 }

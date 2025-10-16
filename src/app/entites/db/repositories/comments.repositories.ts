@@ -1,6 +1,8 @@
+import 'server-only'
+
 import { eq, desc } from 'drizzle-orm'
 
-import { db } from '@/pkg/integrations/drizzle/drizzle.client'
+import { db } from '@/pkg/integrations/drizzle/drizzle.server'
 
 import { Comment, comments, NewComment } from '../schemas/comments.schema'
 

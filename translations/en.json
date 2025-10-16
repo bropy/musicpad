@@ -79,5 +79,58 @@
     "how_it_works": "How It Works",
     "reviews_label": "Excellent user reviews",
     "tests_today": "IQ tests taken today!"
+  },
+  "how_it_works": {
+    "title": "How it Works"
+  },
+  "boost": {
+    "title": "Boost Your Abilities",
+    "subtitle": "Unlock your potential with our comprehensive training package"
+  },
+  "community": {
+    "title": "Community",
+    "subtitle": "Follow us on social media for daily quizzes, challenges and brain teasers to keep your mind sharp"
+  },
+  "benefits": {
+    "title": "What Will You Get"
+  },
+  "pricing": {
+    "title": "Explore our plans",
+    "subtitle": "Discover our flexible offers and choose the one that best suits your learning and personal development journey.",
+    "get_started": "Get started",
+    "footer_text": "*Visit our",
+    "pricing_page": "pricing page",
+    "footer_text_end": "to find out more details."
+  },
+  "faq": {
+    "title_line1": "Frequently",
+    "title_line2": "Asked",
+    "title_line3": "Questions",
+    "questions": {
+      "satisfaction": {
+        "question": "What if I'm not satisfied with the program?",
+        "answer": "We offer a satisfaction guarantee. If you're not happy with the program, you can request a refund within the specified period according to our refund policy."
+      },
+      "cancel": {
+        "question": "How do I cancel my subscription?",
+        "answer": "You can cancel your subscription at any time through your account settings. Navigate to the subscription section and click on 'Cancel Subscription'. Your access will continue until the end of your current billing period."
+      },
+      "duration": {
+        "question": "How long does the IQ test take?",
+        "answer": "The IQ test typically takes between 30-45 minutes to complete. We recommend taking it in a quiet environment without distractions for the most accurate results."
+      },
+      "retake": {
+        "question": "Can I retake tests?",
+        "answer": "Yes, you can retake tests. However, we recommend waiting at least 30 days between attempts to ensure accurate results and minimize practice effects."
+      },
+      "devices": {
+        "question": "Can I access myIQ on multiple devices?",
+        "answer": "Yes, you can access your myIQ account on multiple devices. Simply log in with your credentials on any device, and your progress will be synced across all platforms."
+      },
+      "security": {
+        "question": "Is my data secure?",
+        "answer": "Absolutely. We use industry-standard encryption and security measures to protect your data. Your personal information and test results are stored securely and are never shared with third parties without your consent."
+      }
+    }
   }
 }

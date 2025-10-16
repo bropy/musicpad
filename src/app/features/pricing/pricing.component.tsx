@@ -1,31 +1,36 @@
 'use client';
 
 import { Check } from 'lucide-react';
+import { Button } from '@heroui/button';
+import { Card, CardHeader, CardBody, CardFooter } from '@heroui/card';
+import { useTranslations } from 'next-intl';
 import { plans } from './elements/constant';
 
 // component
 export default function PricingPlans() {
+    const t = useTranslations('pricing');
 
     // return
   return (
-    <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-r from-blue-50/50 via-gray-50 to-blue-50/50 py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Explore our plans
+            {t('title')}
           </h1>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-            Discover our flexible offers and choose the one that best suits your learning and personal development journey.
+            {t('subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div className="flex justify-center items-center gap-8 mb-8 flex-wrap">
           {plans.map((plan, index) => (
-            <div
+            <Card
               key={index}
-              className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8"
+              isHoverable
+              className="w-full max-w-[365px] p-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="border-b border-gray-200 pb-6 mb-6">
+              <CardHeader className="flex-col items-start border-b border-gray-200 pb-6">
                 <h2 className="text-sm font-semibold text-gray-900 tracking-wide mb-4">
                   {plan.name}
                 </h2>
@@ -40,33 +45,40 @@ export default function PricingPlans() {
                     {plan.period}
                   </span>
                 </div>
-              </div>
+              </CardHeader>
 
-              <ul className="space-y-4 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start">
-                    <Check className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-600">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <CardBody className="py-6">
+                <ul className="space-y-4">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <Check className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-600">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </CardBody>
 
-              <button className="w-full bg-teal-700 hover:bg-teal-800 text-white font-medium py-3 px-6 rounded-lg transition-colors">
-                Get started
-              </button>
-            </div>
+              <CardFooter>
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/80 text-white font-medium py-3 px-6 rounded-lg"
+                  size="lg"
+                >
+                  {t('get_started')}
+                </Button>
+              </CardFooter>
+            </Card>
           ))}
         </div>
 
         <div className="text-center">
           <p className="text-gray-600">
-            *Visit our{' '}
+            {t('footer_text')}{' '}
             <a href="#" className="text-gray-900 underline hover:text-teal-700 transition-colors">
-              pricing page
+              {t('pricing_page')}
             </a>
-            {' '}to find out more details.
+            {' '}{t('footer_text_end')}
           </p>
         </div>
       </div>

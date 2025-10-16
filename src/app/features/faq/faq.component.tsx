@@ -2,10 +2,12 @@
 
 import { useState } from 'react'
 import { ChevronRight } from 'lucide-react'
-import { faqs } from '@/app/features/faq/elements/constant'
+import { useTranslations } from 'next-intl'
+import { faqKeys } from '@/app/features/faq/elements/constant/faq.constant'
 
 // component
 export default function FAQAccordion() {
+  const t = useTranslations('faq')
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const toggleFAQ = (index: number) => {
@@ -14,24 +16,24 @@ export default function FAQAccordion() {
 
   // return
   return (
-    <div className="min-h-screen bg-white p-8 md:p-16">
+    <div className="bg-white py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-[300px_1fr] gap-12">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              Frequently<br />Asked<br />Questions
+              {t('title_line1')}<br />{t('title_line2')}<br />{t('title_line3')}
             </h1>
           </div>
 
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200">
+            {faqKeys.map((key, index) => (
+              <div key={key} className="border-b border-gray-200">
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full py-5 flex items-center justify-between text-left hover:text-gray-600 transition-colors"
                 >
                   <span className="text-lg font-medium text-gray-900 pr-4">
-                    {faq.question}
+                    {t(`questions.${key}.question`)}
                   </span>
                   <ChevronRight
                     className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${
@@ -46,7 +48,7 @@ export default function FAQAccordion() {
                   }`}
                 >
                   <p className="text-gray-600 leading-relaxed">
-                    {faq.answer}
+                    {t(`questions.${key}.answer`)}
                   </p>
                 </div>
               </div>

@@ -1,1 +1,1 @@
-export { db } from './drizzle.client'
+export { db } from './drizzle.server'

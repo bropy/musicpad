@@ -9,7 +9,8 @@ const config: Config = {
     screens: { sm: '768px', md: '1024px', lg: '1360px' },
     extend: {
       colors: {
-        primary: "#1f75db",
+        primary: "#0D766E",
+        highlighted: "#1f75db",
       },
     },
   },
@@ -46,7 +47,7 @@ const config: Config = {
         light: {
           colors: {
             primary: {
-              DEFAULT: '#1f75db',
+              DEFAULT: '#0D766E',
             },
           },
         },

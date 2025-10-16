@@ -3,6 +3,7 @@
 import { type FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { Button } from '@heroui/button'
 import { createCommentSchema, type CreateCommentForm } from '@/app/shared/validations'
 import { useComments } from '@/app/entites'
 
@@ -73,13 +74,14 @@ const CommentForm: FC<IProps> = ({ onSuccess }) => {
         )}
       </div>
 
-      <button
+      <Button
         type="submit"
         disabled={isCreating}
-        className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full px-6 py-3 bg-primary hover:bg-primary/80 text-white rounded-lg"
+        size="lg"
       >
         {isCreating ? 'Posting...' : 'Post Comment'}
-      </button>
+      </Button>
     </form>
   )
 }

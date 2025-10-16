@@ -1,14 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { restApiFetcher } from '@/pkg/libraries/rest-api'
-
-interface Comment {
-  id: string
-  userName: string
-  title: string
-  content: string
-  createdAt: string
-  updatedAt: string
-}
+import { restApiFetcher, commentsQueryOptions } from '@/pkg/libraries/rest-api'
+import type { Comment } from '@/pkg/libraries/rest-api'
 
 interface CreateCommentDto {
   userName: string
@@ -24,13 +16,7 @@ interface UpdateCommentDto {
 export const useComments = () => {
   const queryClient = useQueryClient()
 
-  const { data: comments, isLoading } = useQuery({
-    queryKey: ['comments'],
-    queryFn: async () => {
-      const response = await restApiFetcher.get('comments')
-      return response.json<Comment[]>()
-    },
-  })
+  const { data: comments, isLoading } = useQuery(commentsQueryOptions())
 
   const createMutation = useMutation({
     mutationFn: async (data: CreateCommentDto) => {

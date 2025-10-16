@@ -1,20 +1,23 @@
 'use client';
 
 import { Check } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { boostItems } from './elements/constants';
 
 // component
 function BoostAbilities() {
+  const t = useTranslations('boost');
+
   // return
   return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Boost Your Abilities
+            {t('title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Unlock your potential with our comprehensive training package
+            {t('subtitle')}
           </p>
         </div>
 

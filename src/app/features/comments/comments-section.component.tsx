@@ -2,6 +2,7 @@
 
 import { type FC, useState } from 'react'
 import { MessageSquare } from 'lucide-react'
+import { Button } from '@heroui/button'
 import { useComments } from '@/app/entites'
 import CommentForm from './comment-form.component'
 import CommentItem from './comment-item.component'
@@ -19,12 +20,12 @@ const CommentsSection: FC = () => {
             Comments ({comments.length})
           </h2>
         </div>
-        <button
+        <Button
           onClick={() => setShowForm(!showForm)}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="px-4 py-2 bg-primary hover:bg-primary/80 text-white rounded-lg"
         >
           {showForm ? 'Cancel' : 'Add Comment'}
-        </button>
+        </Button>
       </div>
 
       {showForm && (

@@ -8,10 +8,16 @@ const createCommentSchema = z.object({
   content: z.string().min(1),
 })
 
+export const revalidate = 30 // Revalidate every 30 seconds
+
 export async function GET() {
   try {
     const comments = await dbService.comments.findAll()
-    return NextResponse.json(comments)
+    return NextResponse.json(comments, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=59',
+      },
+    })
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch comments' }, { status: 500 })
   }

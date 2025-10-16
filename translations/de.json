@@ -79,5 +79,58 @@
     "how_it_works": "Wie es funktioniert",
     "reviews_label": "Hervorragende Nutzerbewertungen",
     "tests_today": "IQ-Tests heute absolviert!"
+  },
+  "how_it_works": {
+    "title": "Wie es funktioniert"
+  },
+  "boost": {
+    "title": "Steigern Sie Ihre Fähigkeiten",
+    "subtitle": "Entfesseln Sie Ihr Potenzial mit unserem umfassenden Trainingspaket"
+  },
+  "community": {
+    "title": "Gemeinschaft",
+    "subtitle": "Folgen Sie uns in den sozialen Medien für tägliche Quizze, Herausforderungen und Denksportaufgaben, um Ihren Geist scharf zu halten"
+  },
+  "benefits": {
+    "title": "Was Sie erhalten werden"
+  },
+  "pricing": {
+    "title": "Erkunden Sie unsere Pläne",
+    "subtitle": "Entdecken Sie unsere flexiblen Angebote und wählen Sie das, das am besten zu Ihrer Lern- und persönlichen Entwicklungsreise passt.",
+    "get_started": "Jetzt starten",
+    "footer_text": "*Besuchen Sie unsere",
+    "pricing_page": "Preisseite",
+    "footer_text_end": "um weitere Details zu erfahren."
+  },
+  "faq": {
+    "title_line1": "Häufig",
+    "title_line2": "gestellte",
+    "title_line3": "Fragen",
+    "questions": {
+      "satisfaction": {
+        "question": "Was ist, wenn ich mit dem Programm nicht zufrieden bin?",
+        "answer": "Wir bieten eine Zufriedenheitsgarantie. Wenn Sie mit dem Programm nicht zufrieden sind, können Sie innerhalb des angegebenen Zeitraums gemäß unserer Rückerstattungsrichtlinie eine Rückerstattung beantragen."
+      },
+      "cancel": {
+        "question": "Wie kann ich mein Abonnement kündigen?",
+        "answer": "Sie können Ihr Abonnement jederzeit über Ihre Kontoeinstellungen kündigen. Navigieren Sie zum Abonnementbereich und klicken Sie auf 'Abonnement kündigen'. Ihr Zugriff bleibt bis zum Ende Ihres aktuellen Abrechnungszeitraums bestehen."
+      },
+      "duration": {
+        "question": "Wie lange dauert der IQ-Test?",
+        "answer": "Der IQ-Test dauert in der Regel zwischen 30-45 Minuten. Wir empfehlen, ihn in einer ruhigen Umgebung ohne Ablenkungen durchzuführen, um die genauesten Ergebnisse zu erzielen."
+      },
+      "retake": {
+        "question": "Kann ich Tests wiederholen?",
+        "answer": "Ja, Sie können Tests wiederholen. Wir empfehlen jedoch, mindestens 30 Tage zwischen den Versuchen zu warten, um genaue Ergebnisse zu gewährleisten und Übungseffekte zu minimieren."
+      },
+      "devices": {
+        "question": "Kann ich auf myIQ auf mehreren Geräten zugreifen?",
+        "answer": "Ja, Sie können auf Ihr myIQ-Konto auf mehreren Geräten zugreifen. Melden Sie sich einfach mit Ihren Anmeldedaten auf jedem Gerät an, und Ihr Fortschritt wird über alle Plattformen hinweg synchronisiert."
+      },
+      "security": {
+        "question": "Sind meine Daten sicher?",
+        "answer": "Absolut. Wir verwenden branchenübliche Verschlüsselung und Sicherheitsmaßnahmen, um Ihre Daten zu schützen. Ihre persönlichen Informationen und Testergebnisse werden sicher gespeichert und niemals ohne Ihre Zustimmung an Dritte weitergegeben."
+      }
+    }
   }
 }
